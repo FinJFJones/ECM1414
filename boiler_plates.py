@@ -6,6 +6,10 @@ from dataclasses import dataclass
 
 @dataclass
 class Activity:
+    '''
+    Dataclass containing an Activitie's name, time taken, cost and enjoyment
+    '''
+    
     name: str
     time: int # Not accessed - only budget (unless extension)
     cost: int

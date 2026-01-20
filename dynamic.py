@@ -9,3 +9,13 @@ Variables needed in this file (and brute_force.py):
 
 
 '''
+
+## External Packages ##
+
+## Group Packages ##
+from utils import read_file
+
+ACTIVITIES, NUM_ACTIVITIES, MAX_TIME, MAX_BUDGET = read_file('/Sample Input Files-20260120/input_small.txt')
+
+assert NUM_ACTIVITIES == len(ACTIVITIES), 'Number of activities stated in file does not match the len of the activities list.'
+
