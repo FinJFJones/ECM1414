@@ -6,7 +6,12 @@ from dataclasses import dataclass
 
 @dataclass
 class Activity:
-    name: int
+    name: str
     time: int # Not accessed - only budget (unless extension)
     cost: int
     enjoyment: int
+
+    @classmethod
+    def from_strings(cls, data):
+        return cls(data[0], int(data[1]), int(data[2]), int(data[3]))
+    
