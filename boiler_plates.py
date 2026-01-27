@@ -11,7 +11,7 @@ class Activity:
     '''
     
     name: str
-    time: int # Not accessed - only budget (unless extension)
+    time: int # Not accessed - only cost (unless extension)
     cost: int
     enjoyment: int
 
@@ -22,7 +22,7 @@ class Activity:
 @dataclass
 class ActivitySet:
     '''
-    Dataclass containing a list of activities which can return total enjoyment and cost
+    Dataclass containing a list of activities which can return total enjoyment, time and cost
     '''
 
     activities: list # List of activities
@@ -32,9 +32,10 @@ class ActivitySet:
         return sum(activity.enjoyment for activity in self.activities)
     
     @property
+    def time(self):
+        return sum(activity.time for activity in self.activities)
+
+    @property
     def cost(self):
         return sum(activity.cost for activity in self.activities)
     
-    @property
-    def time(self):
-        return sum(activity.time for activity in self.activities)

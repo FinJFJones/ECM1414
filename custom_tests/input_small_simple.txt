@@ -1,0 +1,7 @@
+5
+10 10
+Campus-Tour 2 1 5
+Game-Night 3 4 12
+Museum-Trip 4 5 15
+Pizza-Workshop 2 3 10
+Hiking 5 2 14
