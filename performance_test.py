@@ -15,8 +15,12 @@ start = perf_counter()
 activity_set = dynamic_algorithm()
 time_difference = perf_counter()-start
 print(time_difference)
+print(activity_set.cost)
+print(activity_set.enjoyment)
 
 start = perf_counter()
 # activity_set = brute_force()
 time_difference = perf_counter()-start
 print(time_difference)
+print(activity_set.cost)
+print(activity_set.enjoyment)
