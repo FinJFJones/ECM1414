@@ -7,7 +7,7 @@ from dataclasses import dataclass
 @dataclass
 class Activity:
     '''
-    Dataclass containing an Activitie's name, time taken, cost and enjoyment
+    Dataclass containing an Activity's name, time taken, cost and enjoyment
     '''
     
     name: str
@@ -18,4 +18,23 @@ class Activity:
     @classmethod
     def from_strings(cls, data):
         return cls(data[0], int(data[1]), int(data[2]), int(data[3]))
+
+@dataclass
+class ActivitySet:
+    '''
+    Dataclass containing a list of activities which can return total enjoyment and cost
+    '''
+
+    activities: list # List of activities
+
+    @property
+    def enjoyment(self):
+        return sum(activity.enjoyment for activity in self.activities)
     
+    @property
+    def cost(self):
+        return sum(activity.cost for activity in self.activities)
+    
+    @property
+    def time(self):
+        return sum(activity.time for activity in self.activities)
