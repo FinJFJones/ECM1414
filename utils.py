@@ -45,15 +45,15 @@ def run_algorithm(algorithm, input_file):
     :param input_file: Path to the input file
     '''
     
-    ACTIVITIES, NUM_ACTIVITIES, MAX_TIME, MAX_COST = read_file(input_file)
-    assert NUM_ACTIVITIES == len(ACTIVITIES), 'Number of activities stated in file does not match the len of the activities list.'
+    ACTIVITIES, NUM_ACTIVITIES, MAX_TIME, MAX_COST = read_file(input_file) # Retrieve file info
+    assert NUM_ACTIVITIES == len(ACTIVITIES), 'Number of activities stated in file does not match the len of the activities list.' # Ensure activities retrieved is the same length as num_activities
 
-    start = perf_counter()
-    activity_set = algorithm(ACTIVITIES, NUM_ACTIVITIES, MAX_TIME, MAX_COST)
-    elapsed_time = perf_counter()-start
+    start = perf_counter() # Start timer for performance test
+    activity_set = algorithm(ACTIVITIES, NUM_ACTIVITIES, MAX_TIME, MAX_COST) # Run the given algorithm
+    elapsed_time = perf_counter()-start # End the performance test
 
     activity_str = ''
-    for activity in activity_set.activities:
+    for activity in activity_set.activities: # Loop through the activities to create a formatted list
         activity_str += f'- {activity.name} ({activity.time} hours, £{activity.cost}, enjoyment {activity.enjoyment})\n '
 
     print(f'''
