@@ -1,9 +1,5 @@
 '''
-Activity dataclass defined in boiler_plates.py
-Reading inputs will be standardised for both algorithms in utils.py
-
-Output in form:
-return (list of activities), enjoyment, time, cost, constraint_summary
+This file contains algorithms for a brute force implementation of a budget allocation problem.
 '''
 
 ## External Packages ##

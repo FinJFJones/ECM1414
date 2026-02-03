@@ -1,5 +1,5 @@
 '''
-Dataclasses for objects with no methods.
+Dataclasses to simplify how activities are stored.
 '''
 
 from dataclasses import dataclass

@@ -15,6 +15,8 @@ def read_file(filename): # File should be in cwd, where filename = '/Sample Inpu
         - Activities list, num_activities, max_time, max_budget
     
     Number of activities exists as line 1 but should be compared with len(activities) anyway
+    
+    :param filename: Path to the input file
     '''
     
     path = os.getcwd() + filename
@@ -36,6 +38,13 @@ def read_file(filename): # File should be in cwd, where filename = '/Sample Inpu
     return activity_list, num_activities, max_time, max_cost
 
 def run_algorithm(algorithm, input_file):
+    '''
+    Runs an implementation for the budget problem using a given algorithm
+    
+    :param algorithm: Function used to solve the problem
+    :param input_file: Path to the input file
+    '''
+    
     ACTIVITIES, NUM_ACTIVITIES, MAX_TIME, MAX_COST = read_file(input_file)
     assert NUM_ACTIVITIES == len(ACTIVITIES), 'Number of activities stated in file does not match the len of the activities list.'
 
