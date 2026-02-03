@@ -9,18 +9,6 @@ This file should run and compare algorithms with ALL given inputs as the perform
 
 from dynamic import dynamic_algorithm
 # from brute_force import brute_force_algorithm
-from time import perf_counter
+from utils import run_algorithm
 
-start = perf_counter()
-activity_set = dynamic_algorithm()
-time_difference = perf_counter()-start
-print(time_difference)
-print(activity_set.cost)
-print(activity_set.enjoyment)
-
-start = perf_counter()
-# activity_set = brute_force()
-time_difference = perf_counter()-start
-print(time_difference)
-print(activity_set.cost)
-print(activity_set.enjoyment)
+run_algorithm(dynamic_algorithm, '/Sample Input Files-20260120/input_small.txt')

@@ -4,6 +4,7 @@ Utilities file for useful functions.
 
 ## External Packages ##
 import os
+from time import perf_counter
 
 ## Group Packages ##
 from boiler_plates import Activity
@@ -33,3 +34,31 @@ def read_file(filename): # File should be in cwd, where filename = '/Sample Inpu
         activity_list.append(activity)
     
     return activity_list, num_activities, max_time, max_cost
+
+def run_algorithm(algorithm, input_file):
+    ACTIVITIES, NUM_ACTIVITIES, MAX_TIME, MAX_COST = read_file(input_file)
+    assert NUM_ACTIVITIES == len(ACTIVITIES), 'Number of activities stated in file does not match the len of the activities list.'
+
+    start = perf_counter()
+    activity_set = algorithm(ACTIVITIES, NUM_ACTIVITIES, MAX_TIME, MAX_COST)
+    elapsed_time = perf_counter()-start
+
+    activity_str = ''
+    for activity in activity_set.activities:
+        activity_str += f'- {activity.name} ({activity.time} hours, £{activity.cost}, enjoyment {activity.enjoyment})\n '
+
+    print(f'''
+========================================
+EVENT PLANNER - RESULTS
+========================================
+Input File: {input_file}
+Available Time: {MAX_TIME} hours (NOT USED)
+Available Budget: £{MAX_COST}
+--- {algorithm} ALGORITHM ---
+Selected Activities:
+ {activity_str}
+Total Enjoyment: {activity_set.enjoyment}
+Total Time Used: {activity_set.time} hours
+Total Cost: £{activity_set.cost}
+Execution Time: {elapsed_time} seconds
+''')
