@@ -10,5 +10,5 @@ return (list of activities), enjoyment, time, cost, constraint_summary
 
 ## Group Packages ##
 
-def brute_force(activities, num_activities, max_time, max_cost):
+def brute_force_algorithm(activities, num_activities, max_time, max_cost):
     pass

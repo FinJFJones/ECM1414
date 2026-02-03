@@ -54,7 +54,7 @@ EVENT PLANNER - RESULTS
 Input File: {input_file}
 Available Time: {MAX_TIME} hours (NOT USED)
 Available Budget: £{MAX_COST}
---- {algorithm} ALGORITHM ---
+--- {algorithm.__name__} ALGORITHM ---
 Selected Activities:
  {activity_str}
 Total Enjoyment: {activity_set.enjoyment}
