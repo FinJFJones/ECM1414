@@ -8,7 +8,7 @@ from dynamic import dynamic_algorithm
 from brute_force import brute_force_algorithm
 from utils import run_algorithm
 
-input_file = '/Sample Input Files-20260120/input_small.txt'
+input_file = '/Sample Input Files-20260120/input_medium.txt'
 
 run_algorithm(dynamic_algorithm, input_file)
 

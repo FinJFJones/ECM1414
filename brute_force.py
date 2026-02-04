@@ -7,7 +7,7 @@ This file contains algorithms for a brute force implementation of a budget alloc
 ## Group Packages ##
 from boiler_plates import ActivitySet
 
-def best_activity(activities, num_activites, current_activties, max_cost):
+def best_activity(activities, num_activites, current_activities, max_cost):
     '''
     A recursive solution to find the activities with the most enjoyment within the budget
     
@@ -19,12 +19,12 @@ def best_activity(activities, num_activites, current_activties, max_cost):
     :rtype: ActivitySet
     '''
 
-    top_activity = ActivitySet(current_activties) #hold best activity, also initialised in case of all activities have been explored
+    top_activity = ActivitySet(current_activities) #hold best activity, also initialised in case of all activities have been explored
 
     for activity in activities: #loop through all the activities so they can all be visited atleast once
-        if activity in current_activties: #we cannot repeat activites so skip these
+        if activity in current_activities: #we cannot repeat activites so skip these
             continue
-        new_activity_set = ActivitySet(current_activties + [activity]) #use for checking constraint and passing recursively
+        new_activity_set = ActivitySet(current_activities + [activity]) #use for checking constraint and passing recursively
         if new_activity_set.cost > max_cost:
             continue
         activity_found = best_activity(activities, num_activites, new_activity_set.activities, max_cost) #recursively call algorithm and use the new activties
