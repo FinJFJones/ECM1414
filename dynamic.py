@@ -5,7 +5,6 @@ This file contains algorithms for a dynamic programming implementation of a budg
 ## External Packages ##
 
 ## Group Packages ##
-from utils import read_file
 from boiler_plates import ActivitySet
 
 def add_activity(score_table, activity, depth, max_cost):
