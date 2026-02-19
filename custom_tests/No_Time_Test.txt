@@ -1,0 +1,12 @@
+10
+0 200
+Campus_Tour 3 40 30
+Pizza_Night 2 60 110
+Museum_Visit 2 60 90
+Karaoke 2 30 130
+Arcade 2 50 150
+Movie_Night 4 40 130
+Drawing 2 30 100
+Claywork 3 60 110
+Skydiving 2 100 200
+Group_Walk 3 20 100
