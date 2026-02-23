@@ -1,7 +1,0 @@
-FileFormat: 
-Num Activities
-MaxTime MaxCost
-NameActivity Time Cost EnjVal
-NameActivity Time Cost EnjVal
-NameActivity Time Cost EnjVal
-NameActivity Time Cost EnjVal
