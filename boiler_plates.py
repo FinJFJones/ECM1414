@@ -14,7 +14,7 @@ class Activity:
     time: int # Not accessed - only cost (unless extension)
     cost: int
     enjoyment: int
-    id: int
+    id: int # Stops referencing the same object
 
     @classmethod
     def from_strings(cls, data, id):

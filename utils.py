@@ -71,3 +71,5 @@ Total Time Used: {activity_set.time} hours
 Total Cost: £{activity_set.cost}
 Execution Time: {elapsed_time} seconds
 ''')
+    
+    return activity_set.enjoyment, activity_set.time, activity_set.cost, elapsed_time
