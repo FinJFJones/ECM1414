@@ -14,10 +14,11 @@ class Activity:
     time: int # Not accessed - only cost (unless extension)
     cost: int
     enjoyment: int
+    id: int
 
     @classmethod
-    def from_strings(cls, data):
-        return cls(data[0], int(data[1]), int(data[2]), int(data[3]))
+    def from_strings(cls, data, id):
+        return cls(data[0], int(data[1]), int(data[2]), int(data[3]), id)
 
 @dataclass
 class ActivitySet:

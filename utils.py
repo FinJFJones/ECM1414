@@ -30,9 +30,9 @@ def read_file(filename): # File should be in cwd, where filename = '/Sample Inpu
         max_cost = int(time_cost_line.split()[1])
     
     activity_list = []
-    for line in activities_lines:
+    for id, line in enumerate(activities_lines):
         data = line.split() # Activity line split into name, time, cost, enjoyment
-        activity = Activity.from_strings(data) # Uses class method for casting
+        activity = Activity.from_strings(data, id) # Uses class method for casting
         activity_list.append(activity)
     
     return activity_list, num_activities, max_time, max_cost
