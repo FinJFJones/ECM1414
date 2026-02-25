@@ -2,9 +2,9 @@ import test_generator
 import matplotlib.pyplot as plt
 from performance_test import compare_file
 
-increments = 19
+increments = 500
 
-test_generator.generate(19, 0.2)
+test_generator.generate(increments, 50)
 
 times_dynamic = []
 times_brute_force = []
@@ -14,9 +14,10 @@ for i in range(increments+1):
     times_dynamic.append(dynamic_results[-1])
     times_brute_force.append(brute_force_results[-1])
 
-plt.plot([i for i in range(increments+1)], times_dynamic)
-plt.plot([i for i in range(increments+1)], times_brute_force)
-plt.title('Time Taken Per Activity')
+plt.plot([i for i in range(increments+1)], times_dynamic, label='Dynamic')
+plt.plot([i for i in range(increments+1)], times_brute_force, label='Brute Force')
+plt.legend()
+plt.title('Time Taken Per No. Activities')
 plt.xlabel('Activities')
-plt.ylabel('Time Taken To Solve')
+plt.ylabel('Time Taken To Solve (s)')
 plt.show()
